@@ -3,50 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>50ème Anniversaire</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Célébration du 50ème Anniversaire</title>
+    <style>
+        :root {
+            --red: #e63946;
+            --black: #1d3557;
+            --blue: #457b9d;
+            --light: #f1faee;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--black);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 3px solid var(--red);
+            padding-bottom: 1rem;
+        }
+        
+        h1 {
+            color: var(--red);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--blue);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .event-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .info-card {
+            background-color: white;
+            border-left: 5px solid var(--blue);
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-card h3 {
+            color: var(--black);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .info-card p {
+            color: #333;
+        }
+        
+        .schedule {
+            margin-top: 2rem;
+        }
+        
+        .schedule-item {
+            display: flex;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+        
+        .time {
+            background-color: var(--red);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin-right: 1rem;
+            min-width: 80px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--blue);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--black);
+        }
+        
+        .btn-red {
+            background-color: var(--red);
+        }
+        
+        .rsvp-form {
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 3rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: var(--black);
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .checkbox-group {
+            margin-top: 1rem;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .checkbox-label input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .confirmation {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>50ème Anniversaire</h1>
-            <h2>Célébration d'un demi-siècle</h2>
+            <h1>Célébration des 50 ans</h1>
+            <h2>Un moment inoubliable à partager ensemble</h2>
         </header>
         
-        <section>
-            <h3>Détails de l'événement</h3>
-            <p><strong>Date :</strong> Dimanche 19 juillet 2025, à partir de 10h</p>
-            <p><strong>Adresse :</strong> 60 Rue Delord, 33300 Bordeaux, France</p>
-            <p><strong>Petit-déjeuner :</strong> 10h00 avec café et croissant</p>
-            <p><strong>Brunch :</strong> 13h00</p>
-        </section>
+        <div class="event-info">
+            <div class="info-card">
+                <h3>Date et Heure</h3>
+                <p>Dimanche, 19 Juillet 2025</p>
+                <p>À partir de 10h00</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>Lieu</h3>
+                <p>60 Rue Delord, 33300 Bordeaux, France</p>
+                <a href="https://www.google.com/travel/search?q=hotel%20pres%20de%2060%20Rue%20Delord%2C%2033300%20Bordeaux%2C%20France&g2lb=4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72560029%2C72573224%2C72601601%2C72616120%2C72619927%2C72647020%2C72648289%2C72686036%2C72760082%2C72763836%2C72803964%2C72808078%2C72825295%2C72827241%2C72832976%2C72852292%2C72882230%2C72885032%2C72895620&hl=fr-US&gl=us&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI6Q8QBxgSEgcI6Q8QBxgVGAMyAggBKgkKBToDRVVSGgA&qs=CAE4BkIJEdwxcK0iZ57MQgkRodypeaTSCP1CCRHnJTWYDh3UXUgAWmoyaKoBZRABKgkiBWhvdGVsKAQyHxABIhv8JQ-QiO15fD_lDZj1Mtb4MM9m0u8c-hBLsq4yNRACIjFob3RlbCBwcmVzIGRlIDYwIHJ1ZSBkZWxvcmQgMzMzMDAgYm9yZGVhdXggZnJhbmNl&ap=MAFoAQ&ictx=111&ved=0CAAQ5JsGahcKEwjg4v2Aw5KMAxUAAAAAHQAAAAAQDg" class="btn" target="_blank">Trouver un hôtel à proximité</a>
+            </div>
+            
+            <div class="info-card">
+                <h3>Programme</h3>
+                <div class="schedule">
+                    <div class="schedule-item">
+                        <div class="time">10h00</div>
+                        <div>Petit-déjeuner avec café et croissants</div>
+                    </div>
+                    <div class="schedule-item">
+                        <div class="time">13h00</div>
+                        <div>Brunch</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <section>
-            <h3>RSVP - Confirmez Votre Présence</h3>
+        <div class="rsvp-form">
+            <h3>Confirmation de présence</h3>
             <form id="rsvpForm">
-                <label for="name">Votre Nom :</label>
-                <input type="text" id="name" required>
+                <div class="form-group">
+                    <label for="name">Nom et Prénom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
                 
-                <label for="attendance">Serez-vous présent ?</label>
-                <select id="attendance" required>
-                    <option value="">--Veuillez sélectionner--</option>
-                    <option value="yes">Oui, je serai présent</option>
-                    <option value="no">Non, je ne pourrai pas être présent</option>
-                </select>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
                 
-                <button type="submit">Envoyer RSVP</button>
+                <div class="form-group">
+                    <label>Votre présence</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="attendance" value="breakfast"> Je serai présent(e) pour le petit-déjeuner (10h)
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="attendance" value="brunch"> Je serai présent(e) pour le brunch (13h)
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="guests">Nombre d'invités (vous y compris)</label>
+                    <select id="guests" name="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message (optionnel)</label>
+                    <input type="text" id="message" name="message">
+                </div>
+                
+                <button type="submit" class="btn btn-red">Confirmer ma présence</button>
             </form>
-            <div id="confirmationMessage"></div>
-        </section>
+            
+            <div id="confirmation" class="confirmation">
+                Merci pour votre réponse ! Nous avons bien noté votre présence.
+            </div>
+        </div>
         
-        <section>
-            <h3>Hôtels à Proximité</h3>
-            <a href="https://www.google.com/travel/search?q=hotel%20pres%20de%2060%20Rue%20Delord%2C%2033300%20Bordeaux%2C%20France" target="_blank">
-                <button>Trouver des Hôtels à Proximité</button>
-            </a>
-        </section>
+        <footer>
+            <p>Au plaisir de célébrer ce moment avec vous !</p>
+        </footer>
     </div>
-
-    <script src="js/script.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the form and confirmation elements
+            const rsvpForm = document.getElementById('rsvpForm');
+            const confirmation = document.getElementById('confirmation');
+            
+            // Handle form submission
+            rsvpForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const guests = document.getElementById('guests').value;
+                const message = document.getElementById('message').value;
+                
+                // Get selected attendance options
+                const attendanceOptions = document.querySelectorAll('input[name="attendance"]:checked');
+                const attendance = Array.from(attendanceOptions).map(option => option.value);
+                
+                // Store the data in localStorage (since this is a static site)
+                const rsvpData = {
+                    name,
+                    email,
+                    guests,
+                    attendance,
+                    message,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Save to localStorage
+                const savedRSVPs = JSON.parse(localStorage.getItem('birthdayRSVPs') || '[]');
+                savedRSVPs.push(rsvpData);
+                localStorage.setItem('birthdayRSVPs', JSON.stringify(savedRSVPs));
+                
+                // Show confirmation message
+                confirmation.style.display = 'block';
+                
+                // Reset form
+                rsvpForm.reset();
+                
+                // Hide confirmation after 5 seconds
+                setTimeout(function() {
+                    confirmation.style.display = 'none';
+                }, 5000);
+            });
+        });
+    </script>
 </body>
 </html>
