@@ -1,412 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>50 Years on Arrakis - Célébration d'Anniversaire</title>
-    <style>
-        :root {
-            --sand-light: #f5e7c1;
-            --sand-medium: #e6c78c;
-            --sand-dark: #bd9f69;
-            --spice-blue: #4a7396;
-            --spice-orange: #d96c06;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: var(--sand-light);
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-image: url('/api/placeholder/1200/600');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(245, 231, 193, 0.9);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        header {
-            text-align: center;
-            padding: 30px 0;
-            background-color: var(--spice-orange);
-            color: white;
-            border-radius: 5px 5px 0 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        header h2 {
-            font-style: italic;
-            margin-top: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-        
-        .worm-icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 80px;
-            height: 80px;
-            background-color: var(--sand-dark);
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        h3 {
-            color: var(--spice-blue);
-            border-bottom: 2px solid var(--sand-medium);
-            padding-bottom: 10px;
-        }
-        
-        .info-box {
-            background-color: var(--sand-medium);
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .schedule {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .schedule-item {
-            flex-basis: 30%;
-            background-color: var(--sand-light);
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .schedule-item h4 {
-            color: var(--spice-orange);
-            margin-top: 0;
-        }
-        
-        button {
-            background-color: var(--spice-blue);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        button:hover {
-            background-color: #375a76;
-        }
-        
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        input, select {
-            margin-bottom: 15px;
-            padding: 10px;
-            border: 1px solid var(--sand-medium);
-            border-radius: 5px;
-        }
-        
-        .water-drop {
-            position: relative;
-            padding-left: 25px;
-        }
-        
-        .water-drop::before {
-            content: "💧";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .language-toggle {
-            text-align: right;
-            margin-bottom: 10px;
-        }
-
-        .language-toggle button {
-            background-color: var(--sand-dark);
-            padding: 5px 10px;
-            font-size: 14px;
-        }
-
-        .en, .fr {
-            display: none;
-        }
-
-        .show-en .en {
-            display: block;
-        }
-
-        .show-fr .fr {
-            display: block;
-        }
-
-        #rsvpList {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: var(--sand-light);
-            border-radius: 5px;
-        }
-
-        #rsvpList h4 {
-            margin-top: 0;
-            color: var(--spice-blue);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: var(--sand-dark);
-            font-style: italic;
-        }
-    </style>
+    <title>50ème Anniversaire</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="show-en show-fr">
-    <div class="language-toggle">
-        <button onclick="toggleLanguage('en')">English</button>
-        <button onclick="toggleLanguage('fr')">Français</button>
-    </div>
-    
+<body>
     <div class="container">
         <header>
-            <div class="worm-icon"></div>
-            <h1 class="en">50 Years on Arrakis</h1>
-            <h1 class="fr">50 Ans sur Arrakis</h1>
-            <h2 class="en">A Celebration of Spice and Life</h2>
-            <h2 class="fr">Une Célébration de l'Épice et de la Vie</h2>
+            <h1>50ème Anniversaire</h1>
+            <h2>Célébration d'un demi-siècle</h2>
         </header>
         
         <section>
-            <h3 class="en">The Gathering of the Great Houses</h3>
-            <h3 class="fr">Le Rassemblement des Grandes Maisons</h3>
-            
-            <div class="info-box">
-                <p class="en"><strong>Date:</strong> Sunday, July 19th, 2025, starting at 10am</p>
-                <p class="fr"><strong>Date:</strong> Dimanche 19 juillet 2025, à partir de 10h</p>
-                
-                <p class="en"><strong>Location:</strong> 60 Rue Delord, 33300 Bordeaux, France</p>
-                <p class="fr"><strong>Lieu:</strong> 60 Rue Delord, 33300 Bordeaux, France</p>
-            </div>
-            
-            <p class="en">The Water of Life flows freely as we celebrate a half-century of existence. Join us for this momentous occasion!</p>
-            <p class="fr">L'Eau de Vie coule librement alors que nous célébrons un demi-siècle d'existence. Rejoignez-nous pour cette occasion mémorable !</p>
-            
-            <a href="https://www.google.com/travel/search?q=hotel%20pres%20de%2060%20Rue%20Delord%2C%2033300%20Bordeaux%2C%20France&g2lb=4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72560029%2C72573224%2C72601601%2C72616120%2C72619927%2C72647020%2C72648289%2C72686036%2C72760082%2C72763836%2C72803964%2C72808078%2C72825295%2C72827241%2C72832976%2C72852292%2C72882230%2C72885032%2C72895620&hl=fr-US&gl=us&ssta=1&ts=CAESCgoCCAMKAggDEAAaIAoCGgASGhIUCgcI6Q8QBxgSEgcI6Q8QBxgVGAMyAggBKgkKBToDRVVSGgA&qs=CAE4BkIJEdwxcK0iZ57MQgkRodypeaTSCP1CCRHnJTWYDh3UXUgAWmoyaKoBZRABKgkiBWhvdGVsKAQyHxABIhv8JQ-QiO15fD_lDZj1Mtb4MM9m0u8c-hBLsq4yNRACIjFob3RlbCBwcmVzIGRlIDYwIHJ1ZSBkZWxvcmQgMzMzMDAgYm9yZGVhdXggZnJhbmNl&ap=MAFoAQ&ictx=111&ved=0CAAQ5JsGahcKEwjg4v2Aw5KMAxUAAAAAHQAAAAAQDg" target="_blank">
-                <button class="en">Find Hotels Nearby</button>
-                <button class="fr">Trouver des Hôtels à Proximité</button>
-            </a>
+            <h3>Détails de l'événement</h3>
+            <p><strong>Date :</strong> Dimanche 19 juillet 2025, à partir de 10h</p>
+            <p><strong>Adresse :</strong> 60 Rue Delord, 33300 Bordeaux, France</p>
+            <p><strong>Petit-déjeuner :</strong> 10h00 avec café et croissant</p>
+            <p><strong>Brunch :</strong> 13h00</p>
         </section>
         
         <section>
-            <h3 class="en">The Feast Schedule</h3>
-            <h3 class="fr">Programme des Festivités</h3>
-            
-            <div class="schedule">
-                <div class="schedule-item">
-                    <h4 class="en">Morning Breakfast</h4>
-                    <h4 class="fr">Petit-déjeuner</h4>
-                    <p class="en">10:00 AM - 11:30 AM</p>
-                    <p class="fr">10h00 - 11h30</p>
-                    <p class="water-drop en">Water allotment: Moderate</p>
-                    <p class="water-drop fr">Ration d'eau: Modérée</p>
-                </div>
-                
-                <div class="schedule-item">
-                    <h4 class="en">Spice Brunch</h4>
-                    <h4 class="fr">Brunch Épicé</h4>
-                    <p class="en">12:00 PM - 2:30 PM</p>
-                    <p class="fr">12h00 - 14h30</p>
-                    <p class="water-drop en">Water allotment: Liberal</p>
-                    <p class="water-drop fr">Ration d'eau: Libérale</p>
-                </div>
-                
-                <div class="schedule-item">
-                    <h4 class="en">Evening Dinner</h4>
-                    <h4 class="fr">Dîner</h4>
-                    <p class="en">7:00 PM - 10:00 PM</p>
-                    <p class="fr">19h00 - 22h00</p>
-                    <p class="water-drop en">Water allotment: Abundant</p>
-                    <p class="water-drop fr">Ration d'eau: Abondante</p>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <h3 class="en">RSVP - Register Your Attendance</h3>
-            <h3 class="fr">RSVP - Confirmez Votre Présence</h3>
-            
+            <h3>RSVP - Confirmez Votre Présence</h3>
             <form id="rsvpForm">
-                <label for="name" class="en">Your Name:</label>
-                <label for="name" class="fr">Votre Nom:</label>
+                <label for="name">Votre Nom :</label>
                 <input type="text" id="name" required>
                 
-                <label for="email" class="en">Your Email:</label>
-                <label for="email" class="fr">Votre Email:</label>
-                <input type="email" id="email" required>
-                
-                <label for="attendance" class="en">Will you attend?</label>
-                <label for="attendance" class="fr">Serez-vous présent?</label>
+                <label for="attendance">Serez-vous présent ?</label>
                 <select id="attendance" required>
-                    <option value="" class="en">--Please select--</option>
-                    <option value="" class="fr">--Veuillez sélectionner--</option>
-                    <option value="yes" class="en">Yes, I will be there</option>
-                    <option value="yes" class="fr">Oui, je serai présent</option>
-                    <option value="no" class="en">No, I cannot attend</option>
-                    <option value="no" class="fr">Non, je ne pourrai pas être présent</option>
+                    <option value="">--Veuillez sélectionner--</option>
+                    <option value="yes">Oui, je serai présent</option>
+                    <option value="no">Non, je ne pourrai pas être présent</option>
                 </select>
                 
-                <label for="guests" class="en">Number of guests:</label>
-                <label for="guests" class="fr">Nombre d'invités:</label>
-                <input type="number" id="guests" min="1" max="5" value="1">
-                
-                <label for="message" class="en">Message to the Kwisatz Haderach:</label>
-                <label for="message" class="fr">Message pour le Kwisatz Haderach:</label>
-                <input type="text" id="message">
-                
-                <button type="submit" class="en">Submit RSVP</button>
-                <button type="submit" class="fr">Envoyer RSVP</button>
+                <button type="submit">Envoyer RSVP</button>
             </form>
-            
-            <div id="rsvpList">
-                <h4 class="en">Confirmed Attendees:</h4>
-                <h4 class="fr">Participants Confirmés:</h4>
-                <ul id="attendeesList"></ul>
-            </div>
+            <div id="confirmationMessage"></div>
         </section>
         
-        <footer>
-            <p class="en">"The spice must flow, and so must the celebration!"</p>
-            <p class="fr">"L'épice doit couler, tout comme la célébration !"</p>
-        </footer>
+        <section>
+            <h3>Hôtels à Proximité</h3>
+            <a href="https://www.google.com/travel/search?q=hotel%20pres%20de%2060%20Rue%20Delord%2C%2033300%20Bordeaux%2C%20France" target="_blank">
+                <button>Trouver des Hôtels à Proximité</button>
+            </a>
+        </section>
     </div>
 
-    <script>
-        // Toggle language display
-        function toggleLanguage(lang) {
-            const body = document.body;
-            
-            if (lang === 'en') {
-                body.classList.toggle('show-en');
-            } else if (lang === 'fr') {
-                body.classList.toggle('show-fr');
-            }
-        }
-        
-        // Handle RSVP form submission
-        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const attendance = document.getElementById('attendance').value;
-            const guests = document.getElementById('guests').value;
-            const message = document.getElementById('message').value;
-            
-            // For a static site, we'll store RSVPs in localStorage
-            if (attendance === 'yes') {
-                saveRSVP(name, email, guests, message);
-                displayRSVPs();
-                
-                // Clear form
-                document.getElementById('rsvpForm').reset();
-                
-                alert('Thank you for your RSVP! / Merci pour votre confirmation !');
-            } else {
-                alert('We will miss you! / Vous nous manquerez !');
-                document.getElementById('rsvpForm').reset();
-            }
-        });
-        
-        // Save RSVP to localStorage
-        function saveRSVP(name, email, guests, message) {
-            let rsvps = JSON.parse(localStorage.getItem('birthdayRSVPs')) || [];
-            
-            rsvps.push({
-                name: name,
-                email: email,
-                guests: guests,
-                message: message,
-                date: new Date().toISOString()
-            });
-            
-            localStorage.setItem('birthdayRSVPs', JSON.stringify(rsvps));
-        }
-        
-        // Display RSVPs from localStorage
-        function displayRSVPs() {
-            const rsvps = JSON.parse(localStorage.getItem('birthdayRSVPs')) || [];
-            const list = document.getElementById('attendeesList');
-            
-            list.innerHTML = '';
-            
-            if (rsvps.length === 0) {
-                const noRsvps = document.createElement('li');
-                noRsvps.classList.add('en');
-                noRsvps.textContent = 'No confirmed attendees yet.';
-                list.appendChild(noRsvps);
-                
-                const noRsvpsFr = document.createElement('li');
-                noRsvpsFr.classList.add('fr');
-                noRsvpsFr.textContent = 'Pas encore de participants confirmés.';
-                list.appendChild(noRsvpsFr);
-                return;
-            }
-            
-            rsvps.forEach(rsvp => {
-                const item = document.createElement('li');
-                const guestText = rsvp.guests > 1 ? 
-                    ` (+ ${rsvp.guests - 1} ${rsvp.guests - 1 > 1 ? 'guests' : 'guest'})` : '';
-                const guestTextFr = rsvp.guests > 1 ? 
-                    ` (+ ${rsvp.guests - 1} ${rsvp.guests - 1 > 1 ? 'invités' : 'invité'})` : '';
-                    
-                const enText = document.createElement('span');
-                enText.classList.add('en');
-                enText.textContent = `${rsvp.name}${guestText}`;
-                
-                const frText = document.createElement('span');
-                frText.classList.add('fr');
-                frText.textContent = `${rsvp.name}${guestTextFr}`;
-                
-                item.appendChild(enText);
-                item.appendChild(frText);
-                list.appendChild(item);
-            });
-        }
-        
-        // Initialize display
-        displayRSVPs();
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
